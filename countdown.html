@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2>Practice JavaScript</h2>
+		</div>
+		<div class="maincontent">
+			
+			
+		
+		<script>
+			var countdown;
+			var countdownNumber;
+			function countdownInit(){
+				countdownNumber=11;
+				countdownTrigger();
+			}
+			function countdownTrigger(){
+				if(countdownNumber > 0){
+					countdownNumber--;
+					document.getElementById("show").innerHTML = countdownNumber;
+					if(countdownNumber > 0){
+						countdown = setTimeout("countdownTrigger()",1000);
+					}
+				
+				}
+			
+			}
+			function countdownClear(){
+				clearTimeout(countdown);
+			}
+		</script>
+		<input type="button" value="start Count" onclick="countdownInit()"/>
+		<input type="button" value="stop Count" onclick="countdownClear()"/>
+		<div id="show"></div>
+		</div>
+		
+		<div class="footer">
+			@copyright by Kardi
+		</div>
+	<section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="content">
+		<div class="header">
+			<h2>Practice JavaScript</h2>
+		</div>
+		<div class="maincontent">
+			<input id="input_txt" type="text">
+			<button onclick ="chekCoding()">Check</button> 
+			<div id="show"></div>
+		</div>
+		
+		<script>
+			function chekCoding(){
+				var txt;
+				var coding= document.getElementById("input_txt").value;
+				switch(coding){
+					case "A":
+					case "a":
+						txt="A for Apple";
+						break;
+					case "B":
+					case "b":
+						txt="B for Ball";
+						break;
+					case "C":
+						txt="B for Cat";
+						break;
+					default:
+						txt="Enter an alphabet";
+						break;
+					
+				
+				}
+				document.getElementById("show").innerHTML=txt;
+			
+			}
+		</script>
+		
+		<div class="footer">
+			@copyright by Kardi
+		</div>
+	<section>
+</body>
+</html>
